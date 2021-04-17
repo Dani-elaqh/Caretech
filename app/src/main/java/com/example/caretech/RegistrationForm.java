@@ -15,17 +15,22 @@ public class RegistrationForm extends AppCompatActivity {
     }
     //Listener button register
     public void onRegisterBtnClick (View view){
-        TextView textFirstName = findViewById(R.id.textFirstName);
-        TextView textLastName = findViewById(R.id.textLastName);
-        TextView textEmail = findViewById(R.id.textEmail);
+        TextView editTextTextPersonPPS = findViewById(R.id.editTextTextPersonPPS);
+        TextView editTextFirstName = findViewById(R.id.editTextFirstName);
+        TextView editTextLastName = findViewById(R.id.editTextLastName);
+        TextView editTextTextPersonCountry = findViewById(R.id.editTextTextPersonCountry);
+        TextView editTextDateOfBirth = findViewById(R.id.editTextDateOfBirth);
+
 
         EditText editTextFirstName = findViewById(R.id.editTextFirstName);
         EditText editTextLastName = findViewById(R.id.editTextLastName);
-        EditText editTextEmail = findViewById(R.id.editTextDateOfBirth);
+        EditText editTextDateOfBirth = findViewById(R.id.editTextDateOfBirth);
 
-        textFirstName.setText("First Name: " + editTextFirstName.getText().toString());
-        textLastName.setText("Last Name: " + editTextLastName.getText().toString());
-        textEmail.setText("Email: " + editTextEmail.getText().toString());
+        editTextTextPersonPPS.setText("PPS Number: " + editTextTextPersonPPS.getText().toString());
+        editTextFirstName.setText("First Name: " + editTextFirstName.getText().toString());
+        editTextLastName.setText("Last Name: " + editTextLastName.getText().toString());
+        editTextTextPersonCountry.setText("Country: " + editTextTextPersonCountry.getText().toString());
+        editTextDateOfBirth.setText("Country: " + editTextDateOfBirth.getText().toString());
 
     }
 }
