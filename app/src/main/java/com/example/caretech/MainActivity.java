@@ -1,6 +1,8 @@
 package com.example.caretech;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.widget.ImageViewCompat;
 import android.view.View;
 import android.view.Menu;
 import android.support.design.widget.FloatingActionButton;
@@ -15,10 +17,13 @@ import androidx.navigation.ui.NavigationUI;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
+        ImageView myImageView = (ImageView) findViewById(R.id.imageView2);
+        button = (Button) findViewById(R.id.button2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity2();
+            }
+        });
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+    }
+
+    public void openActivity2(){
+        Intent intent = new Intent(this, openActivity2.class);
+        startActivity(intent);
     }
 
     @Override

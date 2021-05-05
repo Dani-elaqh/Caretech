@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CareTech">
-        <activity android:name=".Playlist"></activity>
+        <activity
+            android:name=".openActivity2"
+            android:label="@string/title_activity_open2"
+            android:theme="@style/Theme.CareTech.NoActionBar"></activity>
+        <activity android:name=".Playlist" />
         <activity android:name=".Menu" />
         <activity android:name=".WelcomeScreen" />
         <activity android:name=".RegistrationForm" />
